@@ -1,0 +1,15 @@
++----------------------------------------------------------------------------------------+
+|                          Welcome to GCP Instance Setup Wizard                          |
++----------------------------------------------------------------------------------------+
+| This setup occurs from two steps.                                                      |
++											 +
+| At the first step your debian-10 machine will be configured                            |
+| with the parameters such as instance name, type, zone and disk size.                   |
++											 +
+| Then with SSH connection some key components will be installed.                        |
+| The list of components will be appeared at the begining of second step.                |
++											 +
+| Before starting to the second step, while setup wizard tries to establish              |
+| SSH connection, you may see on your terminal 'connection refused'.                     |
+| This is an insignificant notification so no need to interrupt the setup with keyboard. |
++----------------------------------------------------------------------------------------+
