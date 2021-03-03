@@ -1,10 +1,10 @@
 # Build GCP
 
-Build GCP is a setup wizard which configures Google Cloud Project Instance.
+Build GCP is a setup wizard which configures GCP Virtual Machine Instance.
 
 ## Installation
 
-To use Setup clone the main folder to your **/home/** directory and;
+To use Setup clone the repository to your **/home** directory and;
 
 ```bash
 $ bash su.sh
