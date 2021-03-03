@@ -91,4 +91,4 @@ set_pytorch
 set_docker
 
 printf "\nAll the components have been installed. In order to get changes you have to reboot your terminal session.\n"
-printf "\nAfter you rebooted your session you can simply establish your SSH connection with the command: gcloud compute ssh $INSTANCE_NAME\n"
+printf "\nAfter you rebooted your session you can simply establish your SSH connection with the command: gcloud compute ssh <instance name>\n"
