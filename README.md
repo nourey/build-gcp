@@ -10,7 +10,7 @@ To use Setup clone the repository to your **/home** directory and;
 $ bash su.sh
 ```
 
-## Componenets
+## Components
 - Tesseract-OCR
 - Jupyter Notebook
 - Tensorflow
