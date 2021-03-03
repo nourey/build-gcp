@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set_tesseract() {
-	printf "\n Installing Tesseract-OCR"
+	printf "\n Installing Tesseract-OCR\n"
 	sudo apt-get install -y libtool
 	sudo apt-get install -y libleptonica-dev
         sudo apt-get update -y
@@ -34,13 +34,13 @@ set_tesseract() {
 }
 
 set_jupyter() {
-	echo "Installing Jupyter Notebook"
+	printf "\nInstalling Jupyter Notebook\n"
         pip3 install notebook
-        echo "Installed Jupyter Notebook"
+        printf "\nInstalled Jupyter Notebook\n"
 }
 
 set_tf() {
-	printf "\n Installing Tensorflow"
+	printf "\n Installing Tensorflow\n"
 	pip3 install --upgrade tensorflow==2.0.0-rc0
 	pip3 install --upgrade tensorflow
 	printf "\n Installed Tensorflow:\n"
@@ -56,20 +56,20 @@ set_pytorch() {
 }
 
 set_docker() {
-	echo "Installing Docker";
-	sudo apt-get remove docker docker-engine docker.io containerd runc;
-        sudo apt-get update;
+	printf "\nInstalling Docker\n"
+	sudo apt-get remove docker docker-engine docker.io containerd runc
+        sudo apt-get update
 	sudo apt-get install \
 		apt-transport-https \
                 ca-certificates \
                 curl \
                 gnupg-agent \
-                software-properties-common;
-	sudo apt-get update;
-        sudo curl -fsSL https://get.docker.com -o get-docker.sh;
-        sudo sh get-docker.sh;
-        sudo usermod -aG docker $USER;
-        sudo docker run hello-world;
+                software-properties-common
+	sudo apt-get update
+        sudo curl -fsSL https://get.docker.com -o get-docker.sh
+        sudo sh get-docker.sh
+        sudo usermod -aG docker $USER
+        sudo docker run hello-world
 }
 
 cd /home
@@ -90,5 +90,5 @@ set_tf
 set_pytorch
 set_docker
 
-printf "\nAll the components have been installed. In order to get changes you have to reboot your terminal session."
+printf "\nAll the components have been installed. In order to get changes you have to reboot your terminal session.\n"
 printf "\nAfter you rebooted your session you can simply establish your SSH connection with the command: gcloud compute ssh $INSTANCE_NAME\n"
