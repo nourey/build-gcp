@@ -126,10 +126,10 @@ printf "\nWaiting for the machine to be raised."
 sleep 10
 
 printf "\nSending second step\n"
-sudo gcloud compute scp --recurse /home/build-gcp $INSTANCE_NAME:/home --ssh-key-expire-after=2m --project=$PROJECT
+sudo gcloud compute scp --recurse /home/build-gcp $INSTANCE_NAME:/home --ssh-key-expire-after=2m --project $PROJECT --zone $ZONE
 printf "\nSecond step is sent"
 
 sleep 10
 
 printf "\nEstablishing SSH\n"
-gcloud compute ssh $INSTANCE_NAME --command 'cd /home/build-gcp && bash su-2.sh'
+gcloud compute ssh $INSTANCE_NAME --project $PROJECT --zone $ZONE --command 'cd /home/build-gcp && bash su-2.sh'
