@@ -8,6 +8,10 @@ To use Setup clone the repository to your **/home** directory and;
 
 ```bash
 $ bash su.sh
+
+# or
+
+$ ./su.sh
 ```
 
 ## Components
