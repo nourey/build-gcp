@@ -9,7 +9,7 @@ To use Setup clone the repository to your **/home** directory and;
 ```bash
 $ bash su.sh
 
-# *or*
+# _or_
 
 $ ./su.sh
 ```
