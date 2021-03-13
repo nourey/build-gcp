@@ -10,15 +10,15 @@ set_tesseract() {
         sudo apt-get install -y libsdl-pango-dev
         sudo apt-get install -y libicu-dev
         sudo apt-get install -y libcairo2-dev
-        sudo apt-get install bc
-	sudo apt-get update
-	sudo apt-get install build-essential
-	sudo apt-get install manpages-dev
+        sudo apt-get install -y bc
+	sudo apt-get update -y
+	sudo apt-get install -y build-essential
+	sudo apt-get install -y manpages-dev
 	wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
 	sudo apt-add-repository "deb http://apt.llvm.org/stretch/ llvm-toolchain-stretch main"
-	sudo apt-get update
+	sudo apt-get update -y
 	sudo apt-get install -y clang clang-format clang-tidy lldb libc++-8-dev libc++abi-8-dev
-	sudo apt-get install unzip
+	sudo apt-get install -y unzip
         sudo wget https://github.com/tesseract-ocr/tesseract/archive/4.1.1.zip
         sudo chmod -R 777 4.1.1.zip
         sudo unzip 4.1.1.zip
@@ -30,7 +30,7 @@ set_tesseract() {
         sudo ldconfig
         sudo make training
         sudo make training-install
-	printf "\nInstalled version of tesseract-ocr:\n $(tesseract --version)" 
+	printf "\nInstalled version of tesseract-ocr:\n $(tesseract --version)"
 }
 
 set_jupyter() {
@@ -41,8 +41,7 @@ set_jupyter() {
 
 set_tf() {
 	printf "\n Installing Tensorflow\n"
-	pip3 install --upgrade tensorflow==2.0.0-rc0
-	pip3 install --upgrade tensorflow
+	pip3 install "tensorflow>=2.0.0"
 	printf "\n Installed Tensorflow:\n"
 	python3 -c 'import tensorflow as tf;print(tf.__version__)'
 
@@ -57,15 +56,15 @@ set_pytorch() {
 
 set_docker() {
 	printf "\nInstalling Docker\n"
-	sudo apt-get remove docker docker-engine docker.io containerd runc
-        sudo apt-get update
-	sudo apt-get install \
+	sudo apt-get remove -y docker docker-engine docker.io containerd runc
+        sudo apt-get update -y
+	sudo apt-get install -y \
 		apt-transport-https \
                 ca-certificates \
                 curl \
                 gnupg-agent \
                 software-properties-common
-	sudo apt-get update
+	sudo apt-get update -y
         sudo curl -fsSL https://get.docker.com -o get-docker.sh
         sudo sh get-docker.sh
         sudo usermod -aG docker $USER
@@ -79,10 +78,11 @@ sudo chmod -R 777 /home/build-gcp/components-list.txt
 less -FX /home/build-gcp/components-list.txt
 sleep 7
 
-sudo apt-get install wget
-sudo apt install python3-pip
-python3 -m pip install --upgrade pip
-sudo apt-get install python3-setuptools
+sudo apt-get install -y wget
+sudo add-apt-repository -y universe
+sudo apt install -y python3-pip
+sudo apt-get install -y python-setuptools
+sudo -H pip3 install --upgrade pip
 
 set_tesseract
 set_jupyter
