@@ -15,6 +15,7 @@ $ bash main.sh
 - Jupyter Notebook
 - Tensorflow
 - Pytorch
+- Anaconda 3
 - Docker
 - pip
 - wget
