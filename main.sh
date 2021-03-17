@@ -60,6 +60,10 @@ sleep 1
 
 printf "\nEstablishing SSH\n"
 gcloud compute ssh $INSTANCE_NAME --project $PROJECT --zone $ZONE --command 'bash /home/build-gcp/conda/conda.sh'
+
+echo "Setting default Zones as: " $ZONE
+gcloud config set compute/zone $ZONE
+
 echo "Setup is done. You can simply establish your SSH connection via:
-gcloud compute ssh" $INSTANCE_NAME "--zone" $ZONE
+gcloud compute ssh" $INSTANCE_NAME 
 echo ''
