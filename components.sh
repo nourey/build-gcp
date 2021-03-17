@@ -85,7 +85,7 @@ source /opt/anaconda3/etc/profile.d/conda.sh
 conda install -c anaconda pip -y
 /opt/anaconda3/bin/pip install --upgrade pip
 
-#set_tesseract
+set_tesseract
 set_jupyter
 set_tf
 set_pytorch
