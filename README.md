@@ -4,7 +4,7 @@ Build GCP is a setup wizard which configures GCP Virtual Machine Instance.
 
 ## Installation
 
-To use Setup clone the repository to your **/home** directory and;
+To use Setup, clone the repository to your **/home** directory and;
 
 ```bash
 $ bash main.sh
@@ -18,6 +18,7 @@ $ bash main.sh
 - Anaconda 3
 - Docker
 - pip
+- pip 3
 - wget
 - setuptools
 - leptonica
