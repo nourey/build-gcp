@@ -1,10 +1,10 @@
 # Build GCP
 
-Build GCP is a setup wizard which configures GCP Virtual Machine Instance.
+Build GCP is a setup wizard which configures GCP Virtual Machine Instance and Installs some components.
 
 ## Installation
 
-To use Setup, clone the repository to your **/home** directory and;
+To use Setup, clone the repository  and;
 
 ```bash
 $ bash main.sh
