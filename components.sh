@@ -70,16 +70,6 @@ set_docker() {
         sudo docker run hello-world
 }
 
-upd_conda() {
-        conda update --all -y
-}
-
-ls_conda() {
-        clear
-        conda list
-        echo ''
-}
-
 cd /home
 
 printf "These are the components that will be installed:\n"
@@ -93,24 +83,12 @@ sudo apt-get install -y python-setuptools
 
 source /opt/anaconda3/etc/profile.d/conda.sh
 conda install -c anaconda pip -y
-/opt/anaconda/bin/pip install --upgrade pip
+/opt/anaconda3/bin/pip install --upgrade pip
 
 #set_tesseract
 set_jupyter
 set_tf
 set_pytorch
 set_docker
-
-echo ''
-read -p "Want to see all installed conda packages?
-y/n ? " ls_conda_answ
-
-if [ $ls_conda_answ == "y" ]
-then
-        ls_conda
-elif [ $ls_conda_answ == "n" ]
-then
-        :
-fi
 
 exit
