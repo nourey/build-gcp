@@ -1,8 +1,5 @@
 #!bin/bash
 
-
-source build-gcp/main.sh
-
 export INSTANCE_NAME=$INSTANCE_NAME
 export ZONE=$ZONE
 export INSTANCE_TYPE=$INSTANCE_TYPE
