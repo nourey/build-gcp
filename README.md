@@ -7,7 +7,7 @@ Build GCP is a setup wizard which configures GCP Virtual Machine Instance.
 To use Setup clone the repository to your **/home** directory and;
 
 ```bash
-$ bash su.sh
+$ bash main.sh
 ```
 
 ## Components
