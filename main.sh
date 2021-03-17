@@ -61,4 +61,5 @@ sleep 1
 printf "\nEstablishing SSH\n"
 gcloud compute ssh $INSTANCE_NAME --project $PROJECT --zone $ZONE --command 'bash /home/build-gcp/conda/conda.sh'
 echo "Setup is done. You can simply establish your SSH connection via:
-gcloud compute ssh" $INSTANCE_NAME
+gcloud compute ssh" $INSTANCE_NAME "--zone" $ZONE
+echo ''
