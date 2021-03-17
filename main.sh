@@ -49,7 +49,6 @@ clear
 gcloud auth login
 PROJECT=$(gcloud config get-value core/project 2> /dev/null)
 
-clear
 printf "\nWaiting for the machine to be raised."
 sleep 10
 
