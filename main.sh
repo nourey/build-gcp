@@ -34,7 +34,7 @@ echo "          --[3] Zone:          " $ZONE
 echo "          --[4] Disk Size:     " $BOOT_DISK_SIZE
 printf "\n"
 
-bash ~/build-gcp/configure-instance/verify_configuration
+bash ~/build-gcp/configure-instance/verify_configuration.sh
 
 source configure-instance/verify-configuration.sh
 export INSTANCE_NAME=$INSTANCE_NAME
