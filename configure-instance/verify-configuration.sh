@@ -44,4 +44,4 @@ then
 fi
 }
 
-verify-configuration
+verify_configuration
