@@ -2,6 +2,7 @@
 
 dir="~/build-gcp"
 
+cd $dir
 sudo chmod -R 777 $dir
 
 clear
