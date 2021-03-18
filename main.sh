@@ -62,6 +62,7 @@ gcloud compute ssh $INSTANCE_NAME --project $PROJECT --zone $ZONE --command 'bas
 echo "Setting default Zones as: " $ZONE
 gcloud config set compute/zone $ZONE
 
+echo''
 echo "Setup is done. You can simply establish your SSH connection via:
 gcloud compute ssh" $INSTANCE_NAME 
 echo ''
