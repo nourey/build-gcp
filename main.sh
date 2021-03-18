@@ -41,10 +41,9 @@ export INSTANCE_TYPE=$INSTANCE_TYPE
 export ZONE=$ZONE
 export BOOT_DISK_SIZE=$BOOT_DISK_SIZE
 
-clear
+
 bash configure-instance/build-instance.sh
 
-clear
 gcloud auth login
 PROJECT=$(gcloud config get-value core/project 2> /dev/null)
 
