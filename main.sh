@@ -2,7 +2,6 @@
 
 dir="~/build-gcp"
 
-cd $dir
 sudo chmod -R 777 $dir
 
 clear
@@ -34,7 +33,7 @@ echo "          --[3] Zone:          " $ZONE
 echo "          --[4] Disk Size:     " $BOOT_DISK_SIZE
 printf "\n"
 
-bash ~/build-gcp/configure-instance/verify-configuration.sh
+bash ../build-gcp/configure-instance/verify-configuration.sh
 
 source configure-instance/verify-configuration.sh
 export INSTANCE_NAME=$INSTANCE_NAME
