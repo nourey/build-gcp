@@ -51,7 +51,7 @@ printf "\nWaiting for the machine to be raised."
 sleep 10
 
 printf "\nPreparing for second step\n"
-sudo gcloud compute scp --recurse /home/build-gcp $INSTANCE_NAME:/home --ssh-key-expire-after=10m --project $PROJECT --zone $ZONE
+sudo gcloud compute scp --recurse ~/build-gcp $INSTANCE_NAME:/home --ssh-key-expire-after=10m --project $PROJECT --zone $ZONE
 printf "\nSecond step is sent"
 
 sleep 1
