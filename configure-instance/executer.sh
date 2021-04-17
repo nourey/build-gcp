@@ -3,7 +3,7 @@
 executer() {
 while :
 do
-        cat information-files/WELCOME.txt
+        cat ~/build-gcp/information-files/WELCOME.txt
         printf "\n"
         read -p "+---------------------------------------+
 |  To start y.          To exit n.      |
