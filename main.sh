@@ -6,21 +6,21 @@ cd $dir
 sudo chmod -R 777 $dir
 
 clear
-bash configure-instance/executer.sh
+bash ~/build-gcp/configure-instance/executer.sh
 
 clear
-bash configure-instance/gcloud.sh
+bash ~/build-gcp/configure-instance/gcloud.sh
 
 clear
 read -p "Which name do you want to give your Google VM Instance? " INSTANCE_NAME
 
 clear
-source configure-instance/check-availability.sh
+source ~/build-gcp/configure-instance/check-availability.sh
 export INSTANCE_TYPE=$INSTANCE_TYPE
 export ZONE=$ZONE
 
 clear
-source configure-instance/disk-size.sh
+source ~/build-gcp/configure-instance/disk-size.sh
 export BOOT_DISK_SIZE=$BOOT_DISK_SIZE
 
 clear
@@ -35,14 +35,14 @@ echo "          --[4] Disk Size:     " $BOOT_DISK_SIZE
 printf "\n"
 
 
-source configure-instance/verify-configuration.sh
+source ~/build-gcp/configure-instance/verify-configuration.sh
 export INSTANCE_NAME=$INSTANCE_NAME
 export INSTANCE_TYPE=$INSTANCE_TYPE
 export ZONE=$ZONE
 export BOOT_DISK_SIZE=$BOOT_DISK_SIZE
 
 
-bash configure-instance/build-instance.sh
+bash ~/build-gcp/configure-instance/build-instance.sh
 
 gcloud auth login
 PROJECT=$(gcloud config get-value core/project 2> /dev/null)
