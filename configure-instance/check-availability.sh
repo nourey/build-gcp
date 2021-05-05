@@ -11,7 +11,7 @@ while :
 do
 read -p "
 [1] To see available machine types in desired Zone.
-[2] To see available zones for desired Machine Type.
+[2] To see available zones for desired machine Type.
 [3] When you find the right machine type with corresponding zone you can make your selection.
 
 Please enter your numeric choice: " answ_zone
