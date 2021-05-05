@@ -14,8 +14,6 @@ set_tesseract() {
         sudo apt-get update -y
         sudo apt-get install -y build-essential
         sudo apt-get install -y manpages-dev
-        wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
-        sudo apt-add-repository "deb http://apt.llvm.org/stretch/ llvm-toolchain-stretch main"
         sudo apt-get update -y
         sudo apt-get install -y clang clang-format clang-tidy lldb libc++-8-dev libc++abi-8-dev
         sudo apt-get install -y unzip
