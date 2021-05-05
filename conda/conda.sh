@@ -37,7 +37,6 @@ echo "Installing Anaconda 3"
 sleep 3
 
 sudo apt-get install -y wget
-sudo add-apt-repository -y universe
 sudo apt-get install -y python-setuptools
 
 set_conda
