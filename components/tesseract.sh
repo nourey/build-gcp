@@ -3,6 +3,7 @@
 set_leptonica() {
         sudo wget http://www.leptonica.org/source/leptonica-1.80.0.tar.gz
         sudo tar xf leptonica-1.80.0.tar.gz
+        sudo apt-get install -y clang clang-format clang-tidy lldb libc++-8-dev libc++abi-8-dev
         cd leptonica-1.80.0
         sudo ./configure
         sudo make
@@ -25,7 +26,6 @@ set_tesseract() {
         sudo apt-get install -y build-essential
         sudo apt-get install -y manpages-dev
         sudo apt-get update -y
-        sudo apt-get install -y clang clang-format clang-tidy lldb libc++-8-dev libc++abi-8-dev
         sudo apt-get install -y unzip
         sudo wget https://github.com/tesseract-ocr/tesseract/archive/4.1.1.zip
         sudo chmod -R 777 4.1.1.zip
