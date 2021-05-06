@@ -9,6 +9,8 @@ To use Setup, clone the repository  and;
 ```bash
 $ bash main.sh
 ```
+After installation is completed to use conda with multi-users, run **user_conda.sh** from user whose wants to use conda.
+
 ## Components
 | Component | Version |
 | ------ | ------ |
