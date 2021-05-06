@@ -47,6 +47,8 @@ conda install -c anaconda pip -y
 echo "Updating all conda packages "
 upd_conda
 
+sudo mv /home/build-gcp/conda/user_conda.sh /home
+
 bash /home/build-gcp/components/components.sh
 
 exit
