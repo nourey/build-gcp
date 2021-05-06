@@ -1,5 +1,15 @@
 #!/bin/bash
 
+set_leptonica() {
+        wget http://www.leptonica.org/source/leptonica-1.80.0.tar.gz
+        sudo tar xf leptonica-1.80.0.tar.gz
+        cd leptonica-1.80.0
+        sudo ./configure
+        sudo make
+        sudo make install
+        }
+        
+
 set_tesseract() {
         printf "\n Installing Tesseract-OCR\n"
         sudo apt-get install -y libtool
@@ -30,5 +40,6 @@ set_tesseract() {
         sudo make training-install
 }
 
+set_leptonica
 set_tesseract 
 
