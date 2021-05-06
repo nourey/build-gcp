@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set_leptonica() {
-        wget http://www.leptonica.org/source/leptonica-1.80.0.tar.gz
+        sudo wget http://www.leptonica.org/source/leptonica-1.80.0.tar.gz
         sudo tar xf leptonica-1.80.0.tar.gz
         cd leptonica-1.80.0
         sudo ./configure
