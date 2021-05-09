@@ -4,7 +4,7 @@ set_leptonica() {
         sudo wget http://www.leptonica.org/source/leptonica-1.80.0.tar.gz
         sudo tar xf leptonica-1.80.0.tar.gz
         sudo apt-get install -y clang clang-format clang-tidy lldb libc++-8-dev libc++abi-8-dev
-        cd leptonica-1.80.0
+        cd /home/leptonica-1.80.0
         sudo ./configure
         sudo make
         sudo make install
